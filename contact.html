@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Atelier Air</title>
+    <meta name="description" content="Begin your private consultation with Atelier Air." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="brand-mark">A</span><span class="brand-text">Atelier Air</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Open navigation">Menu</button>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="technology.html">Technology</a><a class="is-active" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section-frame page-intro">
+        <p class="eyebrow">Private Consultation</p>
+        <h1>Tell us about the atmosphere you want to feel.</h1>
+      </section>
+
+      <section class="section-frame contact-layout">
+        <form class="contact-form">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your full name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@studio.com" required />
+          </label>
+          <label>
+            Project Type
+            <select name="type" required>
+              <option value="">Select</option>
+              <option>Luxury Residence</option>
+              <option>Hospitality</option>
+              <option>Gallery / Cultural</option>
+              <option>Commercial HQ</option>
+            </select>
+          </label>
+          <label>
+            Scope
+            <textarea name="scope" rows="5" placeholder="Share timeline, square footage, and priorities." required></textarea>
+          </label>
+          <button class="button" type="submit">Send Request</button>
+        </form>
+        <aside>
+          <h2>Studio Hours</h2>
+          <p>Mon–Fri · 08:00–19:00</p>
+          <p>Emergency engineering hotline available 24/7 for enrolled clients.</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Atelier Air · Client Relations</p>
+      <p>concierge@atelierair.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
