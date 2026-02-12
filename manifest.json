@@ -1,0 +1,10 @@
+{
+  "name": "JPG Infotech",
+  "short_name": "JPG",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06090f",
+  "theme_color": "#06090f",
+  "description": "AI and digital transformation solutions by JPG Infotech",
+  "icons": []
+}
