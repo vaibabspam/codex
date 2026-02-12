@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /internal
+Disallow: /api/
+Crawl-delay: 1
+Sitemap: https://www.jpginfotech.com/sitemap.xml
