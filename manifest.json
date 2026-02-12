@@ -3,6 +3,8 @@
   "short_name": "JPG",
   "start_url": "/",
   "display": "standalone",
+  "background_color": "#06090f",
+  "theme_color": "#06090f",
   "background_color": "#07090d",
   "theme_color": "#07090d",
   "description": "AI and digital transformation solutions by JPG Infotech",
