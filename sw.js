@@ -1,4 +1,5 @@
 const CACHE_NAME = 'jpg-v3';
+const CACHE_NAME = 'jpg-site-v2';
 const ASSETS = [
   '/', '/index.html', '/about.html', '/services.html', '/partners.html', '/customers.html', '/careers.html', '/careers-status.html', '/contact.html', '/security.html', '/style.css', '/script.js', '/manifest.json'
 ];
@@ -10,10 +11,20 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))));
+  event.waitUntil(
+    caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k))))
+  );
   self.clients.claim();
 });
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   event.respondWith(caches.match(event.request).then((cached) => cached || fetch(event.request)));
+  event.respondWith(
+    caches.match(event.request).then((cached) => cached || fetch(event.request).then((response) => {
+      const clone = response.clone();
+      caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+      return response;
+    }))
+  );
 });
